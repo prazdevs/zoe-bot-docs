@@ -4,6 +4,8 @@
   const help = `There's this illusion of the reality, but it's not really really real, like it's beside and inside and inside and beside, but never on top... Nevermind, just kidding, but not really...`;
 
   const ahem = `Ahem. Let me help you use the right commands.`;
+
+  const permissions = `I need a few permissions in the channels you want me to post in. I won't abuse those, I promise!`;
 </script>
 
 <style>
@@ -42,6 +44,35 @@
 <div in:fade={{ duration: 750 }}>
   <quote>{help}</quote>
   <p style="text-align: right;">{ahem}</p>
+
+  <h1>{`What permissions do I need?`}</h1>
+  <p>{permissions}</p>
+  <ul>
+    <li>
+      <code>{`Read Messages`}</code>
+      <div class="details">I need this to read my own posts. Yup.</div>
+    </li>
+    <li>
+      <code>{`Send Messages`}</code>
+      <div class="details">I need this to post messages, obviously.</div>
+    </li>
+    <li>
+      <code>{`Manage Messages`}</code>
+      <div class="details">I need this to remove reactions after modding.</div>
+    </li>
+    <li>
+      <code>{`Embed Links`}</code>
+      <div class="details">I need this to create good looking messages.</div>
+    </li>
+    <li>
+      <code>{`Add Reactions`}</code>
+      <div class="details">I need this to add moderation reactions.</div>
+    </li>
+    <li>
+      <code>{`Read Message History`}</code>
+      <div class="details">I need this to read my own posts. Again.</div>
+    </li>
+  </ul>
 
   <h1>{`You want to add a rule?`}</h1>
   <ul>

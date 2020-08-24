@@ -1,4 +1,6 @@
 <script>
+  import { fade } from "svelte/transition";
+
   const description = `I'm a whymsical and playful bot to help you connect your Reddit community to Discord servers. I will automatically post new submissions from your subreddit to the Discord channel of your choice!
   I can also wait for a moderator to approve them. And if you're too lazy (or busy), don't worry, I'll handle the moderation myself!`;
 
@@ -47,27 +49,30 @@
   <title>ZoeBot4</title>
 </svelte:head>
 
-<div class="img-container">
-  <img src="zoe.png" alt="Zoe" />
-</div>
+<div in:fade={{ duration: 750 }}>
+  <div class="img-container">
+    <img src="zoe.png" alt="Zoe" />
+  </div>
 
-<h1>{`Hey I'm Zoe Bot!`}</h1>
+  <h1>{`Hey I'm Zoe Bot!`}</h1>
 
-<p>{description}</p>
+  <p>{description}</p>
 
-<h1>{`Why was I created?`}</h1>
+  <h1>{`Why was I created?`}</h1>
 
-<p>{creation}</p>
+  <p>{creation}</p>
 
-<div class="link-container" target="_blank" rel="noopener noreferrer">
-  <a alt="r/zoemains" href="https://www.reddit.com/r/zoemains">
-    psst, here's a secret portal to the community
-  </a>
-</div>
+  <div class="link-container" target="_blank" rel="noopener noreferrer">
+    <a alt="r/zoemains" href="https://www.reddit.com/r/zoemains">
+      psst, here's a secret portal to the community
+    </a>
+  </div>
 
-<h1>Need my help?</h1>
-<p>{help}</p>
+  <h1>Need my help?</h1>
+  <p>{help}</p>
 
-<div class="link-container">
-  <a alt="about section" href="about">I want my awesome ZoeBot</a>
+  <div class="link-container">
+    <a alt="about section" href="about">I want my awesome ZoeBot</a>
+  </div>
+
 </div>

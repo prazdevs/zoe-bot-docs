@@ -1,4 +1,6 @@
 <script>
+  import { fade } from "svelte/transition";
+
   const quote = `So, there's these, like, yinger and yangerons, and they spin in this projected pattern which intersects fourth-dimensionally. But it isn't a measurable function. It's got a whoosh, whoom, whoooooooooh!`;
 
   const ahem = `Anyways, here's the boring technical part. ZzZzZz...`;
@@ -49,19 +51,21 @@
   <title>ZoeBot4 | About</title>
 </svelte:head>
 
-<quote>{quote}</quote>
-<p style="text-align: right;">{ahem}</p>
+<div in:fade={{ duration: 750 }}>
+  <quote>{quote}</quote>
+  <p style="text-align: right;">{ahem}</p>
 
-<h1>{`A word from my creator...`}</h1>
-<p>{creator}</p>
+  <h1>{`A word from my creator...`}</h1>
+  <p>{creator}</p>
 
-<h1>{`You want the magic code and nerd stuff?`}</h1>
-<p>{github}</p>
-<div class="link-container">
-  <a alt="ZoeBot4 github repo" href="https://github.com/prazdevs/zoe-bot-4">
-    To the GitHub!
-  </a>
+  <h1>{`You want the magic code and nerd stuff?`}</h1>
+  <p>{github}</p>
+  <div class="link-container">
+    <a alt="ZoeBot4 github repo" href="https://github.com/prazdevs/zoe-bot-4">
+      To the GitHub!
+    </a>
+  </div>
+
+  <h1>{`About this website...`}</h1>
+  <p>{website}</p>
 </div>
-
-<h1>{`About this website...`}</h1>
-<p>{website}</p>

@@ -1,6 +1,4 @@
 <script>
-  import CommandBuilder from "../components/CommandBuilder.svelte";
-
   const help = `There's this illusion of the reality, but it's not really really real, like it's beside and inside and inside and beside, but never on top... Nevermind, just kidding, but not really...`;
 
   const ahem = `Ahem. Let me help you use the right commands.`;

@@ -6,7 +6,6 @@ import babel from "@rollup/plugin-babel";
 import { terser } from "rollup-plugin-terser";
 import config from "sapper/config/rollup.js";
 import pkg from "./package.json";
-import autoPreprocess from "svelte-preprocess";
 
 const mode = process.env.NODE_ENV;
 const dev = mode === "development";
@@ -31,7 +30,6 @@ export default {
         dev,
         hydratable: true,
         emitCss: true,
-        preprocess: autoPreprocess(),
       }),
       resolve({
         browser: true,

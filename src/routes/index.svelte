@@ -40,8 +40,8 @@
 
   img {
     margin: 0 30px 0 30px;
-    max-width: 350px;
     width: 100%;
+    max-width: 350px;
   }
 </style>
 

@@ -27,8 +27,11 @@
     font-size: 1.3rem;
   }
 
-  .details {
+  div {
     font-size: 1.3rem;
+  }
+
+  .details {
     padding-left: 10px;
   }
 
@@ -74,7 +77,9 @@
     </li>
   </ul>
 
-  <h1>{`You want to add a rule?`}</h1>
+  <h1>Commands</h1>
+
+  <h2>{`You want to add a rule?`}</h2>
   <ul>
     <li>
       <code>{`z!add zoemains #public`}</code>
@@ -101,7 +106,7 @@
     </li>
   </ul>
 
-  <h1>{`You want to remove a rule?`}</h1>
+  <h2>{`You want to remove a rule?`}</h2>
   <ul>
     <li>
       <code>{`z!remove zoemains`}</code>
@@ -109,7 +114,7 @@
     </li>
   </ul>
 
-  <h1>{`You want to list the existing rules?`}</h1>
+  <h2>{`You want to list the existing rules?`}</h2>
   <ul>
     <li>
       <code>{`z!get`}</code>
@@ -119,11 +124,33 @@
     </li>
   </ul>
 
-  <h1>{`You need help?`}</h1>
+  <h2>{`You need help?`}</h2>
   <ul>
     <li>
       <code>{`z!help`}</code>
       <div class="details">I will give you a link to... uh... this page.</div>
     </li>
   </ul>
+
+  <h1>{`Moderation features`}</h1>
+
+  <h2>Moderation Channel</h2>
+  <div class="details">
+    If a moderation channel is set, fetched posts will appear first in this
+    channel with 2 reactions underneath : ✅ and ❌. Reacting with ✅ will
+    accept the post, while reacting with ❌ will reject it. Only one reaction is
+    needed to moderate a post.
+  </div>
+  <div class="details">
+    Note: anyone that can read posts and add reactions in the channel can
+    moderate posts.
+  </div>
+
+  <h2>Automod</h2>
+  <div class="details">
+    If an automod delay was given for the rule. Posts will be automodded after
+    the given delay. The original post will be checked on reddit to see if it
+    has not been deleted or removed. If it is still there, it will be assumed to
+    be safe and be posted in the public channel.
+  </div>
 </div>
